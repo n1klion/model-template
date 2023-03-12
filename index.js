@@ -2,11 +2,12 @@ const mongoose = require("mongoose");
 const MongoConnection = require("./util/MongoConnect");
 const store = require("./util/connectionStore");
 
-const constants = require("./constants");
+const { DB_NAMES } = require("./constants");
 
 module.exports = {
   mongoose,
   MongoConnection,
+  init: MongoConnection.init,
   store,
-  constants
+  DB_NAMES
 };
